@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin"
+    tools:context=".WorkoutDetailFragment"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/workoutImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/workout1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/workoutActivity"
+        style="@style/Widget.Inventory.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/duration"
+        tools:text="Screwdrivers" />
+
+    <TextView
+        android:id="@+id/duration"
+        style="@style/Widget.Inventory.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/calories"
+        app:layout_constraintTop_toBottomOf="@+id/activity"
+        tools:text="$5.50" />
+
+    <TextView
+        android:id="@+id/calories"
+        style="@style/Widget.Inventory.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/time"
+        app:layout_constraintTop_toBottomOf="@+id/item_price"
+        tools:text="5" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:id="@+id/btnStart"
+        app:cornerRadius="100dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity = "center"
+        android:text="START"
+        android:layout_centerInParent="true" />
+
+</LinearLayout>
+
+
