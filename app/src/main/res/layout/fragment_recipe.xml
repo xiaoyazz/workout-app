@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="sheridancollege.prog39402.workoutappgroup7.RecipeViewModel" />
+            type="xiaoya.kotlin.workoutapp.RecipeViewModel" />
         <variable
             name="currentCategoryIndex"
             type="Integer" />
@@ -15,7 +15,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="sheridancollege.prog39402.workoutappgroup7.">
+        tools:context="xiaoya.kotlin.workoutapp.workoutappgroup7.">
 
         <ImageView
             android:id="@+id/imageView"

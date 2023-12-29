@@ -1,4 +1,4 @@
-package sheridancollege.prog39402.workoutappgroup7.data.workout
+package xiaoya.kotlin.workoutapp.data.workout
 
 import android.content.Context
 import androidx.room.Database
