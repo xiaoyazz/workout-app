@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/workoutListFragment">
+
+    <fragment
+        android:id="@+id/workoutListFragment"
+        android:name="xiaoya.kotlin.workoutapp.WorkoutListFragment"
+        android:label="G.E.M."
+        tools:layout="@layout/fragment_workout_list" >
+        <action
+            android:id="@+id/action_workoutListFragment_to_workoutDetailFragment"
+            app:destination="@id/workoutDetailFragment" />
+        <action
+            android:id="@+id/action_workoutListFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/workoutDetailFragment"
+        android:name="xiaoya.kotlin.workoutapp.WorkoutDetailFragment"
+        android:label="Today's Workout"
+        tools:layout="@layout/fragment_workout_detail">
+        <argument
+            android:name="workout_id"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="xiaoya.kotlin.workoutapp.ItemListFragment"
+        android:label="My Workout Planner"
+        tools:layout="@layout/item_list_fragment">
+        <action
+            android:id="@+id/action_itemListFragment_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+        <action
+            android:id="@+id/action_itemListFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="xiaoya.kotlin.workoutapp.AddItemFragment"
+        android:label="Add New Activity"
+        tools:layout="@layout/fragment_add_item">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="item_id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_addItemFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment"
+            app:popUpTo="@id/itemListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="xiaoya.kotlin.workoutapp.ItemDetailFragment"
+        android:label="Activity Details"
+        tools:layout="@layout/fragment_item_detail">
+        <argument
+            android:name="item_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_itemDetailFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/workoutDetailsDialogFragment"
+        android:name="xiaoya.kotlin.workoutapp.WorkoutDetailsDialogFragment"
+        android:label="WorkoutDetailsDialogFragment" />
+
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="xiaoya.kotlin.workoutapp.RecipeFragment"
+        android:label="Recipe Gallery" />
+
+</navigation>
