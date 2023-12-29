@@ -7,10 +7,10 @@
 ## Key Features of the App
 - Viewpagers for the built-in workout service with fragments
 - A customized workout planner to plan and schedule workouts
-- LiveData, viewmodels, RoomDB, CorouCnes- Add, edit, or delete workout plan entries
+- LiveData, viewModels, RoomDB, CorouCnes- Add, edit, or delete workout plan entries
 - Reminders and notifications
 - RESTFUL service with open-source API for the recipe gallery feature
-- MulCmedia with recipe image API
+- Multimedia with recipe image API
 
 ## API
 https://www.themealdb.com/
